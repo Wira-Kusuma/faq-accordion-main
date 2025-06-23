@@ -1,0 +1,135 @@
+* {
+    font-family: 'Work Sans';
+    box-sizing: border-box;
+}
+
+:root {
+    --White: hsl(0, 100%, 100%);
+    --Purple-100: hsl(275, 100%, 97%);
+    --Purple-600: hsl(292, 16%, 49%);
+    --Purple-950: hsl(292, 42%, 14%);
+}
+
+body {
+    background-color: var(--Purple-100);
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.pattern {
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    width: 100%;
+    height:40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+main {
+    width: 35rem;
+    border-radius: 10px;
+    background-color: var(--White);
+    margin: auto;
+    margin-top: 5rem;
+    padding: 1rem;
+    box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 1.4rem;
+}
+
+header img {
+    width: 2rem;
+    user-select: none;
+}
+
+h2 {
+    font-size: 1rem;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: ease-in-out 0.2s all;
+}
+
+h2:hover {
+    color: var(--Purple-600);
+}
+
+p {
+    font-size: 0.9rem;
+    color: var(--Purple-600);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 0.6rem 0;
+    border-top:1px solid var(--Purple-100);
+    border-bottom:1px solid var(--Purple-100);
+}
+
+.detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail img {
+    width: 2rem;
+    user-select: none;
+}
+
+#minus1, #minus2, #minus3, #minus4 {
+    display: none;
+    cursor: pointer;
+}
+
+#plus1, #plus2, #plus3, #plus4 {
+    display: flex;
+    cursor: pointer;
+}
+
+#s1, #s2, #s3, #s4 {display: none;}
+
+footer {
+    margin: auto;
+    width: fit-content;
+    position: relative;
+    bottom: -50px;
+    text-align: center;
+}
+
+.hide {display: none ;}
+.show {
+    display: flex !important;
+    animation: fade 0.3s ease;
+}
+
+.visible {
+  display: flex !important;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+@media screen and (max-width:600px) {
+    .pattern {
+        width: 100%;
+        height: 30%;
+    }
+
+    main {
+        width: 80%;
+    }
+}
