@@ -6,8 +6,6 @@ const s = [];
 const plus = [];
 const minus = [];
 
-// icon plus and minus
-
 for (let i = 1; i <= 4; i++) {
   d[i] = document.getElementById(`d${i}`);
   s[i] = document.getElementById(`s${i}`);
@@ -21,7 +19,7 @@ for (let i = 1; i <= 4; i++) {
     for (let j = 1; j <= 4; j++) {
       s[j].classList.remove("show");
       plus[j].classList.remove("hide");
-      minus[j].classList.remove("visible"); // 🧽 Bersihkan dulu
+      minus[j].classList.remove("visible"); // clean first
       minus[j].classList.add("hide");
     }
 
@@ -29,8 +27,8 @@ for (let i = 1; i <= 4; i++) {
     if (!isOpen) {
       s[i].classList.add("show");
       plus[i].classList.add("hide");
-      minus[i].classList.remove("hide"); // Tampilkan
-      minus[i].classList.add("visible"); // Beri class tampil
+      minus[i].classList.remove("hide"); // show
+      minus[i].classList.add("visible"); // give class show
     }
   });
 }

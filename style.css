@@ -16,7 +16,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .pattern {
@@ -44,6 +44,7 @@ header {
     flex-direction: row;
     gap: 10px;
     font-size: 1.4rem;
+    color: var(--Purple-950);
 }
 
 header img {
@@ -56,6 +57,7 @@ h2 {
     margin-right: 10px;
     cursor: pointer;
     transition: ease-in-out 0.2s all;
+    color: var(--Purple-950);
 }
 
 h2:hover {
@@ -115,6 +117,7 @@ footer {
 
 .visible {
   display: flex !important;
+  animation: fade 0.3s ease;
 }
 
 @keyframes fade {
